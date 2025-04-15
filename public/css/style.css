@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
-  --primary-color: #32433d;
+  --primary-color: #262f2f; /* #32433d  */
   --secondary-color: #fbe355;
+  --primary-nav-bar: #201f1f;
+  --secondary-nav-bar: #212020;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
   --font-family: "Arial", sans-serif;
@@ -17,8 +23,8 @@
   width: 100dvw;
   border: 1px solid #000;
   padding: 1rem 4rem 1rem;
-  background-color: var(--primary-color);
-  color: #ecf0f1;
+  background-color: var(--primary-nav-bar);
+  color: #fff;
 }
 
 .index_navbar {
@@ -34,11 +40,11 @@
 }
 
 .index_navbar li:hover {
-  color: #fbe355;
+  color: var(--primary-color);
 }
 
 .index_navbar a:hover {
-  color: #fbe355;
+  color: var(--primary-color);
 }
 
 .index_navbar ul {
@@ -58,7 +64,7 @@
 
 .index_navbar li a {
   text-decoration: none;
-  color: #ecf0f1;
+  color: #fff;
 }
 
 .index_navbar .social_links {
@@ -87,9 +93,11 @@
 }
 
 .index_navbar .navlinks .logo {
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5.5rem;
   object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .index_navbar .navlinks .logo img {
@@ -111,9 +119,55 @@
   width: 7rem;
   border-radius: 0.3rem;
   border: 1px solid var(--secondary-color);
-  background-color: var(--secondary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
 }
 
 .navlinks .navlinks_left button:hover {
+  background-color: var(--secondary-color);
   color: var(--primary-color);
+}
+
+/* Hero page */
+
+.hero-page {
+  height: 75dvh;
+  width: 100dvw;
+  background-color: #32433d;
+}
+
+.hero-page .hero-banner {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-page .hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* About us */
+.about-us {
+  height: 30dvh;
+  width: 100dvw;
+  background-color: #0348307f;
+  color: #000;
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+}
+
+.about-us h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 80%;
 }
