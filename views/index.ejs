@@ -1,131 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Al haseeb Institude | online Quran Academy</title>
-    <link
-      rel="shortcut icon"
-      href="/assets/round-logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="index_navbar">
-        <ul class="social_links">
-          <div class="contact_links">
-            <li>
-              <img src="/assets/alhaseebinstitute.com-0.svg" alt="mail_icon" />
-              <a href="mailto:noumansharifgul@gmail.com"
-                >&nbsp;noumansharifgul@gmail.com</a
-              >
-            </li>
-            <li>
+<%- layout("boilerplate") %>
+
+<body>
+  <main>
+    <!-- Hero section -->
+    <section class="hero-page">
+      <div class="hero-banner">
+        <img src="/assets/hero-banner.png" alt="hero-banner" />
+      </div>
+    </section>
+
+    <!-- About us -->
+    <section class="about-us">
+      <h1>Welcome to Al Haseeb Institute</h1>
+      <p>
+        Online Quran Academy is a spectacular platform of Online Quran Teaching
+        which enables New Muslims and Children all over the world to read Quran
+        with Tajweed from home. We welcome all students interested in Quran
+        learning, The program includes Quran Reading (Nazra Quran), Nurani
+        Qaida, Memorizing Quran, Translation and Prayers Duas with the 6 Kalimas
+        You are just one click away learning from highly trained, qualified,
+        dedicated male and female Quran teachers we have. Our Quran tutors are
+        available to teach Quran 24/7. For free trial click here, In sha Allah
+        you and your kids can start Quran learning immediately.
+      </p>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+      <div class="course-pg-heading">
+        <h2>Course Catagories</h2>
+      </div>
+      <div class="cards">
+        <div class="course-card">
+          <div class="card-top">
+            <div class="card-thumbnail">
               <img
-                src="/assets/alhaseebinstitute.com-1.svg"
-                alt="phone_icon"
-              />&nbsp;+92312345678
-            </li>
-          </div>
-          <div class="socialmedia">
-            <li>
-              <a href="https://www.facebook.com/nouman.sharifgul/"
-                ><img
-                  src="\assets\alhaseebinstitute.com-2.svg"
-                  alt="facebook_icon"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/al_haseeb.institute/"
-                ><img
-                  src="/assets/alhaseebinstitute.com-3.svg"
-                  alt="insta_icon"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https:api.whatsapp.com/send/?phone=+92077890953&text$app_absent=0"
-                ><img src="/assets/alhaseebinstitute-3.svg" alt="whatsapp_icon"
-              /></a>
-            </li>
-          </div>
-        </ul>
-        <ul class="navlinks">
-          <div class="logo">
-            <img src="/assets/colored-logo.png" alt="logo" />
-          </div>
-          <div class="navlinks_left">
-            <li><a href="#" class="navbar_iteam">Home</a></li>
-            <li><a href="#" class="navbar_iteam">Courses</a></li>
-            <li><a href="#" class="navbar_iteam">Plans</a></li>
-            <li><a href="#" class="navbar_iteam">Donation</a></li>
-            <li><a href="#" class="navbar_iteam">About Us</a></li>
-            <li><a href="#" class="navbar_iteam">Contact</a></li>
-
-            <button class="navbar_btn">Free Trials</button>
-          </div>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero section -->
-      <section class="hero-page">
-        <div class="hero-banner">
-          <img src="/assets/hero-banner.png" alt="hero-banner" />
-        </div>
-      </section>
-
-      <!-- About us -->
-      <section class="about-us">
-        <h1>Welcome to Al Haseeb Institute</h1>
-        <p>
-          Online Quran Academy is a spectacular platform of Online Quran
-          Teaching which enables New Muslims and Children all over the world to
-          read Quran with Tajweed from home. We welcome all students interested
-          in Quran learning, The program includes Quran Reading (Nazra Quran),
-          Nurani Qaida, Memorizing Quran, Translation and Prayers Duas with the
-          6 Kalimas You are just one click away learning from highly trained,
-          qualified, dedicated male and female Quran teachers we have. Our Quran
-          tutors are available to teach Quran 24/7. For free trial click here,
-          In sha Allah you and your kids can start Quran learning immediately.
-        </p>
-      </section>
-
-      <!-- Courses Section -->
-      <section class="courses">
-        <div class="course-pg-heading">
-          <h2>Course Catagories</h2>
-        </div>
-        <div class="cards">
-          <div class="course-card">
-            <div class="card-top">
-              <div class="card-thumbnail">
-                <img
-                  src="/assets/course-card-demo-image.png"
-                  alt="course-image"
-                />
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-description">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Incidunt, accusantium. Velit dicta fuga aspernatur sed
-                  quod,alias. Consequuntur sapiente perspiciatis molestiae
-                  deserunt hic suscipit omnis asperiores consequatur eveniet,
-                  nostrum dicta!
-                </p>
-              </div>
-              <button class="card-btn">Course Details</button>
+                src="/assets/course-card-demo-image.png"
+                alt="course-image"
+              />
             </div>
           </div>
+          <div class="card-bottom">
+            <h2 class="card-title">Norani Qaida</h2>
+            <div class="card-description">
+              <p>
+                Norani Qaida is the first step in Quran learning, easing
+                recitation with correct pronunciation, Arabic letters, and
+                tajweed mastery.
+              </p>
+            </div>
+
+            <form action="/courses" method="get">
+              <button class="card-btn primary-btn">Course Details</button>
+            </form>
+          </div>
         </div>
-      </section>
-      <br />
-      <br /><br /><br /><br /><br /><br />
-    </main>
-  </body>
-</html>
+      </div>
+    </section>
+    <br />
+    <br /><br /><br /><br /><br /><br />
+  </main>
+</body>
