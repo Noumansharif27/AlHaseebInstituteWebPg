@@ -347,20 +347,21 @@ body {
   /* background-color: #fbe355; */
 }
 
-.footer .about h3 {
+.footer .footer-link-title-underline {
   margin-bottom: 1.5rem;
   position: relative;
   line-height: 1.2;
+  display: inline-block;
 }
 
 .footer-link-title-underline::before {
   content: "";
-  width: 3rem;
+  width: 50%;
   height: 0.3rem;
   border-radius: 1rem;
   background-color: #7c7a7a;
   position: absolute;
-  top: 120%;
+  bottom: -30%;
   left: 0;
 }
 
