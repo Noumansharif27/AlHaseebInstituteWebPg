@@ -11,3 +11,5 @@ function locoScroll() {
     }
   });
 }
+
+console.warn("JS is working");
