@@ -9,6 +9,10 @@
       href="/assets/round-logo.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -17,5 +21,11 @@
     <div class="container"><%- body %></div>
 
     <%- include("layouts/footer") %>
+    <script
+      nomodule
+      src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

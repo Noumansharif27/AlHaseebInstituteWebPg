@@ -11,6 +11,7 @@
 
 body {
   overflow-x: hidden;
+  transition: scroll 0.5s ease-in 1s;
 }
 
 :root {
@@ -343,7 +344,7 @@ body {
   line-height: 1.2;
 }
 
-.footer .about h3::before {
+.footer .footer-link-title-underline::before {
   content: "";
   width: 3rem;
   height: 0.3rem;
