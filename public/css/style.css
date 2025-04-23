@@ -51,13 +51,13 @@ body {
   list-style: none;
 }
 
-.index_navbar li:hover {
+/* .index_navbar li:hover {
   color: var(--primary-color);
 }
 
 .index_navbar a:hover {
   color: var(--primary-color);
-}
+} */
 
 .index_navbar ul {
   display: flex;
@@ -95,6 +95,10 @@ body {
 
 .index_navbar .socialmedia li {
   margin: 1rem;
+}
+
+.index_navbar .socialmedia li i {
+  scale: 2;
 }
 
 .index_navbar .navlinks {
@@ -140,6 +144,19 @@ body {
   color: var(--primary-color);
 }
 
+.facebook i {
+  color: #1877f2;
+}
+
+.whatsapp i {
+  color: #075e54;
+  transform: scale(1.2);
+}
+
+.instagram img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
 /* Hero page */
 
 .hero-page {
@@ -163,7 +180,7 @@ body {
 .about-us {
   height: 30dvh;
   width: 100dvw;
-  background-color: #0348307f;
+  background-color: #5c8d89;
   color: #000;
   padding: 1rem 4rem;
   display: flex;
@@ -191,6 +208,7 @@ body {
   width: 100dvw;
   background-color: #fefefe;
   padding: 2rem 7rem;
+  color: #fff;
 }
 
 .course-pg-heading {
@@ -269,7 +287,7 @@ body {
 .courses .course-card .card-bottom {
   height: 50%;
   width: 100%;
-  background-color: #fbe355;
+  background-color: var(--primary-color);
   padding: 0.5rem 2rem 2rem 2rem;
   text-align: center;
 }
@@ -309,9 +327,10 @@ body {
 .courses .course-card .card-btn {
   width: 70%;
   height: 3rem;
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  color: var(--secondary-color);
+  background-color: #7a3e3e; /* b19470 */
+  border: 1px solid #7a3e3e;
+  /* color: var(--primary-color); */
+  color: #fff;
   margin-top: 1rem;
   position: relative;
   z-index: 2;
@@ -344,14 +363,19 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   padding: 2rem 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer-top {
   height: 80%;
   border-bottom: 1px solid var(--secondary-color);
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
+  /* background-color: #fbe355; */
   /* flex-direction: row; */
 }
 
@@ -393,10 +417,37 @@ body {
   left: 0;
 }
 
-.contact-us li a img {
+.footer a img {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
+}
+
+/* course review page */
+.course-review {
+  height: 70dvh;
+  width: 100dvw;
+  background-color: pink;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.course-review img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  /* object-position: center; */
+  z-index: -1;
+}
+
+.course-review .filter {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff20;
+  backdrop-filter: blur(5px);
+  z-index: 9;
+  position: absolute;
+  top: 0;
 }
 
 /* Course detail pg */
