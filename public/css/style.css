@@ -385,7 +385,7 @@ body {
 .footer-link-title-underline::before {
   content: "";
   width: 50%;
-  height: 0.3rem;
+  height: 0.2rem;
   border-radius: 1rem;
   background-color: #7c7a7a;
   position: absolute;
