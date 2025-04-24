@@ -425,7 +425,7 @@ body {
 
 /* course review page */
 .course-review {
-  height: 70dvh;
+  height: 75dvh;
   width: 100dvw;
   /* overflow: hidden; */
   position: relative;
@@ -439,25 +439,63 @@ body {
 }
 
 .course-review .review-card {
-  width: 35dvw;
-  height: 35dvh;
+  width: 30vw;
+  height: 55dvh;
   background-color: #075e54;
   z-index: 2;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .course-review h3 {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
   color: #fff;
   font-size: 2rem;
   font-family: "fairyRegular";
+}
+
+.course-review img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Detailed About */
+.detailed-about {
+  height: 130dvh;
+  width: 100dvw;
+  background-color: #075e54;
+  margin-top: 5rem;
+  padding: 3rem 4rem 3rem 8rem;
+}
+
+.detailed-about .top {
+  height: 60%;
+  width: 100%;
+  background-color: #5c8d89;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+}
+
+.detailed-about .top img {
+  height: 30rem;
+  width: 30rem;
+}
+
+.detailed-about .top .highlight h2 {
+  font-size: 3rem;
+}
+
+.detailed-about .top .highlight p {
+  width: 80%;
 }
 
 /* Course detail pg */
