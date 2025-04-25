@@ -15,7 +15,7 @@ body {
 }
 
 :root {
-  --primary-color: #262f2f; /* #32433d  */
+  --primary-color: #32433d; /* #262f2f */
   --secondary-color: #fbe355;
   --primary-nav-bar: #201f1f;
   --secondary-nav-bar: #212020;
@@ -468,21 +468,23 @@ body {
 
 /* Detailed About */
 .detailed-about {
-  height: 130dvh;
+  height: 170dvh;
   width: 100dvw;
   background-color: #075e54;
   margin-top: 5rem;
   padding: 3rem 4rem 3rem 8rem;
+  color: #fff;
+  font-family: "fairyRegular";
 }
 
 .detailed-about .top {
-  height: 60%;
+  height: 45%;
   width: 100%;
-  background-color: #5c8d89;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 4rem;
+  margin-bottom: 2rem;
 }
 
 .detailed-about .top img {
@@ -490,12 +492,88 @@ body {
   width: 30rem;
 }
 
-.detailed-about .top .highlight h2 {
-  font-size: 3rem;
+.detailed-about .secondary-clr {
+  color: var(--secondary-color);
+}
+
+.detailed-about .top h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .detailed-about .top .highlight p {
   width: 80%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detailed-about .bottom {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.detailed-about .bottom h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.detailed-about .bottom p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Services sectiion */
+.services-pg {
+  width: 100dvw;
+  height: 90dvh;
+  background-color: #262f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-family: "fairyRegular";
+  position: relative;
+}
+
+.services {
+  width: 30rem;
+  height: 80%;
+  border: 1px solid var(--background-color);
+  color: #fff;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.services-pg img {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 2rem;
+}
+
+.services ul li {
+  list-style: none;
+  margin: 0.5rem;
+  padding: 1rem 4rem;
+  border: 1px solid #fff;
+  text-align: center;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: 800;
+  border-radius: 0.5rem;
+}
+
+.services ul li:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.services-pg h2 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 
 /* Course detail pg */
