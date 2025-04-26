@@ -3,6 +3,16 @@
   src: url("../font/PlayfairDisplay-Regular.ttf");
 }
 
+@font-face {
+  font-family: "CormorantRegular";
+  src: url("../font/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+  font-family: "calSans";
+  src: url("../font/CalSans-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -582,13 +592,88 @@ body {
   width: 100dvw;
   height: 100dvh;
   background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  padding: 1rem 10rem;
+}
+
+.sign-up-pg .left-pg {
+  width: 30%;
+  height: 80%;
+  /* background-color: var(--text-color); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "CormorantRegular";
+  /* align-items: center; */
+}
+
+.sign-up-pg .left-pg h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "calSans";
+  font-weight: 100;
+}
+
+.sign-up-pg .left-pg p {
+  margin-bottom: 1rem;
+}
+
+.sign-up-pg .left-pg li {
+  /* list-style: none; */
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .sign-up-pg .sign-up-form {
   width: 30%;
-  height: 80%;
-  background-color: var(--secondary-color);
+  height: 70%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.sign-up-pg .sign-up-form h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sign-up-pg .sign-up-form label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.sign-up-pg .sign-up-form input {
+  background-color: transparent;
+  /* border: none; */
+  border: 1px solid var(--primary-color);
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+}
+
+.sign-up-pg .sign-up-form button {
+  width: 40%;
+  height: 2.5rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* .sign-up-pg .sign-up-form button:focus {
+  border: none;
+} */
 
 /* Course detail pg */
 .course-detail-hero-section {
