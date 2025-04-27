@@ -701,7 +701,7 @@ body {
   background-color: var(--primary-color);
   display: flex;
   color: #fff;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
   position: relative;
 }
 
@@ -799,16 +799,56 @@ h3 {
   font-size: 3rem;
 }
 
-.encourage-pg .banner {
+.encourage-pg .consult-banner {
   position: absolute;
-  bottom: -40%;
+  bottom: -35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--primary-color);
+  background-color: #fff;
   width: 90%;
   height: 30%;
-  border: 1px solid var(--secondary-color);
+  /* border: 1px solid var(--secondary-color); */
   z-index: 4;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  color: #000;
+}
+
+.encourage-pg .consult-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.encourage-pg .consult-banner p {
+  width: 80%;
+}
+
+.encourage-pg .consult-banner form {
+  margin: 2.5rem 6rem 0 0;
+}
+
+.encourage-pg .consult-banner form input {
+  width: 15rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+
+.encourage-pg .consult-banner form button {
+  height: 3rem;
+  width: 10rem;
+  background-color: #075e54;
+  border: 1px solid var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 1rem;
+}
+
+.encourage-pg .consult-banner form button:hover {
+  background-color: var(--primary-color);
 }
 
 /* Course detail pg */
