@@ -627,9 +627,14 @@ body {
   font-size: 1.3rem;
 }
 
+.sign-up-pg img {
+  width: 30%;
+  height: 60%;
+}
+
 .sign-up-pg .sign-up-form {
   width: 30%;
-  height: 70%;
+  height: 80%;
   background-color: #fff;
   color: #000;
   display: flex;
@@ -661,10 +666,19 @@ body {
   padding-left: 1rem;
 }
 
+.sign-up-pg .sign-up-form textarea {
+  height: 5rem;
+  width: 15rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
 .sign-up-pg .sign-up-form button {
   width: 40%;
   height: 2.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: 1.1rem;
   background-color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
