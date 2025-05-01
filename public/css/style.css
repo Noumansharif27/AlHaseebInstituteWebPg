@@ -13,6 +13,11 @@
   src: url("../font/CalSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "cenzal";
+  src: url("../font/CinzelDecorative-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -856,6 +861,7 @@ h3 {
   width: 100dvw;
   height: 40dvh;
   position: relative;
+  font-family: "cenzal";
 }
 
 .course-detail-pg img {
@@ -878,7 +884,6 @@ h3 {
   text-align: center;
   /* background-color: #1877f2; */
 }
-
 
 .course-detail-hero-section p {
   width: 50%;
@@ -908,12 +913,12 @@ h3 {
   border-radius: 50%;
 }
 
-
 .course-card {
-  height: 70dvh;
+  height: 80dvh;
   width: 100dvw;
-  background-image: url("/assets/demo-banner-4.png") ;
+  background-image: url("/assets/Beige Minimalist Simple Islamic Quran Verse Instagram Post.png");
   background-position: center;
+  font-family: "cenzal";
 }
 
 .course-card .layer {
@@ -924,17 +929,17 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .course-card .layer .cards {
   width: 100%;
-  height: 80%;
-  background-color: #bb5f5f;
+  height: 85%;
+  /* background-color: #bb5f5f; */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .course-card .layer h2 {
@@ -968,12 +973,19 @@ h3 {
 
 .course-card .layer .cards .banner {
   width: 25rem;
-  height: 95%;
+  height: 90%;
   background-color: var(--primary-color);
 }
 
-.course-card .layer .cards .course-banner img {
+.course-card .layer .cards .banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.course_form {
+  height: 70dvh;
+  width: 100dvw;
+  background-image: url("/assets/course_form.png");
+  background-position: center;
 }
