@@ -989,3 +989,11 @@ h3 {
   background-image: url("/assets/course_form.png");
   background-position: center;
 }
+
+/* Course Form */
+
+.course_form .form {
+  height: 90%;
+  width: 35rem;
+  background-color: #1877f2;
+}
