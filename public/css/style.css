@@ -322,13 +322,13 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  scale: 1.3;
+  opacity: 0.7;
   /* Syntax: transition: property duration timing-function delay; */
-  transition: scale 0.5s ease-in-out 0.1s;
+  transition: opacity 0.5s ease-in-out 0.1s;
 }
 
 .courses .course-card .card-thumbnail img:hover {
-  scale: 1;
+  opacity: 1;
 }
 
 .course-card .card-title {
@@ -857,11 +857,15 @@ h3 {
 }
 
 /* Course detail pg */
+
+body.course-detail-pg-main {
+  font-family: "cenzal";
+}
+
 .course-detail-pg {
   width: 100dvw;
   height: 40dvh;
   position: relative;
-  font-family: "cenzal";
 }
 
 .course-detail-pg img {
@@ -918,7 +922,6 @@ h3 {
   width: 100dvw;
   background-image: url("/assets/Beige Minimalist Simple Islamic Quran Verse Instagram Post.png");
   background-position: center;
-  font-family: "cenzal";
 }
 
 .course-card .layer {
@@ -983,17 +986,111 @@ h3 {
   object-fit: cover;
 }
 
+/* Course Form */
+
 .course_form {
-  height: 70dvh;
+  height: 100dvh;
   width: 100dvw;
   background-image: url("/assets/course_form.png");
   background-position: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Course Form */
-
 .course_form .form {
-  height: 90%;
+  min-height: 90%;
+  width: 30rem;
+  background-color: #00000054;
+  padding: 1rem;
+  border-radius: 1rem;
+  /* margin-top: 1rem; */
+}
+
+.course_form .form h2,
+.course_form .form p {
+  margin-bottom: 1rem;
+  width: 90%;
+  color: #fff;
+}
+
+.course_form .form h2 {
+  color: var(--secondary-color);
+}
+
+.course_form .form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.course_form .form div input,
+.course_form .form div textarea,
+.course_form .form select {
+  min-width: 22rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  margin: 0.5rem 0 0.7rem;
+}
+
+.course_form .form form label {
+  color: #fff;
+}
+
+.course_form .form div input,
+.course_form .form div select {
+  height: 2rem;
+}
+
+.course_form .form div select {
+  color: #000;
+}
+
+.course_form .form form,
+.course_form .form p {
+  font-family: serif;
+}
+
+.course_form .form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.course_form .form button {
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.course_form .form button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.course_form .courses-poster {
   width: 35rem;
-  background-color: #1877f2;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.course_form .courses-poster .poster {
+  height: 27rem;
+  width: 27rem;
+}
+
+.course_form .courses-poster .poster img {
+  height: 100%;
+  width: 100%;
+}
+
+.course_form .courses-poster h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
 }
