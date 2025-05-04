@@ -1,0 +1,439 @@
+/* mobile-width (max-767px) */
+/* Add this at the end of your existing style.css file */
+
+/* Mobile First Styles (base styles) */
+@media (max-width: 767px) {
+  :root {
+    --primary-color: #32433d;
+    --secondary-color: #fbe355;
+    --primary-nav-bar: #201f1f;
+    --secondary-nav-bar: #212020;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --font-family: "Arial", sans-serif;
+  }
+
+  /* General Mobile Adjustments */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-size: 14px; /* Base font size for mobile */
+  }
+
+  /* Header/Navbar Mobile Styles */
+  .header {
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .index_navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .index_navbar .social_links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  .index_navbar .contact_links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .index_navbar .contact_links li {
+    padding-right: 0;
+  }
+
+  .index_navbar .socialmedia {
+    margin-top: 0.5rem;
+  }
+
+  .index_navbar .socialmedia li {
+    margin: 0.5rem;
+  }
+
+  .index_navbar .socialmedia li i {
+    scale: 1.5;
+  }
+
+  .index_navbar .navlinks {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .index_navbar .navlinks .navlinks_left {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .navlinks .navlinks_left li {
+    margin: 0.5rem 0;
+  }
+
+  /* Hero Section */
+  .hero-page {
+    height: 40dvh;
+  }
+
+  /* About Us Section */
+  .about-us {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about-us h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-us p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Courses Section */
+  .courses {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .course-pg-heading {
+    padding: 1rem;
+  }
+
+  .course-pg-heading h2 {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .course-pg-heading h2::before,
+  .course-pg-heading h2::after {
+    display: none; /* Hide the lines on mobile */
+  }
+
+  .courses .cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .courses .course-card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .courses .course-card .card-thumbnail {
+    height: 30dvh;
+  }
+
+  /* Encourage Page */
+  .encourage-pg {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .encourage-pg .left {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .encourage-pg .left h2 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .encourage-pg .left p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .encourage-pg .left .scroll-icons {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .encourage-pg .left .scroll-icons .icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+  }
+
+  .encourage-pg .right {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .encourage-pg .right div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .encourage-pg .right i {
+    font-size: 2rem;
+  }
+
+  .encourage-pg .consult-banner {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .encourage-pg .consult-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .encourage-pg .consult-banner p {
+    width: 100%;
+  }
+
+  .encourage-pg .consult-banner form {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .encourage-pg .consult-banner form input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Course Review */
+  .course-review {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .course-review h3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .course-review .review-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 1rem 0;
+  }
+
+  /* Detailed About */
+  .detailed-about {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .detailed-about .top {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .detailed-about .top img {
+    width: 100%;
+    height: auto;
+  }
+
+  .detailed-about .top .highlight p {
+    width: 100%;
+  }
+
+  .detailed-about .bottom {
+    width: 100%;
+  }
+
+  /* Services Section */
+  .services-pg {
+    height: auto;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .services-pg h2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 1rem 0;
+  }
+
+  .services {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .services-pg img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Sign Up Page */
+  .sign-up-pg {
+    height: auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sign-up-pg .left-pg,
+  .sign-up-pg .sign-up-form,
+  .sign-up-pg img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .sign-up-pg .left-pg h2 {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+
+  .sign-up-pg .sign-up-form input,
+  .sign-up-pg .sign-up-form textarea {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .footer .about,
+  .footer .link-category,
+  .footer .contact-us {
+    width: 100%;
+  }
+}
+
+/* Tablet and Larger Screens */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .index_navbar .social_links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .index_navbar .contact_links {
+    flex-direction: row;
+  }
+
+  .index_navbar .navlinks {
+    flex-direction: row;
+  }
+
+  .index_navbar .navlinks .navlinks_left {
+    flex-direction: row;
+  }
+
+  .courses .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .encourage-pg {
+    flex-direction: row;
+  }
+
+  .encourage-pg .left,
+  .encourage-pg .right {
+    width: 50%;
+  }
+
+  .sign-up-pg {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sign-up-pg .left-pg,
+  .sign-up-pg .sign-up-form,
+  .sign-up-pg img {
+    width: 48%;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer .about,
+  .footer .link-category,
+  .footer .contact-us {
+    width: 48%;
+  }
+}
+
+/* Desktop Screens */
+@media (min-width: 1024px) {
+  .header {
+    padding: 1rem 4rem;
+  }
+
+  .courses .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer .about,
+  .footer .link-category,
+  .footer .contact-us {
+    width: 30%;
+  }
+
+  .sign-up-pg {
+    flex-direction: row;
+  }
+
+  .sign-up-pg .left-pg {
+    width: 30%;
+  }
+
+  .sign-up-pg img {
+    width: 45%;
+  }
+
+  .sign-up-pg .sign-up-form {
+    width: 30%;
+  }
+}
