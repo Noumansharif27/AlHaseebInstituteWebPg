@@ -8,11 +8,8 @@
     />
     <div class="course-detail-hero-section">
       <div class="course-detail">
-        <h1>Noorani Qaida</h1>
-        <p>
-          Norani Qaida is the first step in Quran learning, easing recitation
-          with correct pronunciation, Arabic letters, and tajweed mastery.
-        </p>
+        <h1><%= course.name %></h1>
+        <p><%= course.description %></p>
 
         <div class="social">
           <a href="https://www.facebook.com/nouman.sharifgul/"
@@ -32,13 +29,10 @@
 
   <div class="course-card">
     <div class="layer">
-      <h2>Noorani Qaida</h2>
+      <h2><%= course.name %></h2>
       <div class="cards">
         <div class="course-banner banner">
-          <img
-            src="/assets/Beige Minimalist Simple Islamic Quran Verse Instagram Post.png"
-            alt="course_banner"
-          />
+          <img src="<%= course.image %>" alt="course_banner" />
         </div>
         <div class="content-banner banner">
           <img

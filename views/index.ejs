@@ -28,35 +28,34 @@
     <!-- Courses Section -->
     <section class="courses">
       <a id="courses"></a>
+      <% if(courses) { %>
       <div class="course-pg-heading">
         <h2>Course Catagories</h2>
       </div>
       <div class="cards">
+        <% for( let course of courses ) { %>
         <div class="course-card">
           <div class="card-top">
             <div class="card-thumbnail">
-              <img src="/assets/course-card-img-0.png" alt="course-image" />
+              <img src="/assets/<%= course.image %>" alt="course-image" />
             </div>
           </div>
           <div class="card-bottom">
-            <h2 class="card-title">Norani Qaida</h2>
+            <h2 class="card-title"><%= course.name %></h2>
             <div class="card-description">
-              <p>
-                Norani Qaida is the first step in Quran learning, easing
-                recitation with correct pronunciation, Arabic letters, and
-                tajweed mastery.
-              </p>
+              <p><%= course.description %></p>
             </div>
 
-            <form action="/courses" method="get">
+            <form action="/courses/<%=course. _id %>" method="get">
               <button class="card-btn primary-btn" type="_blank">
                 Course Details
               </button>
             </form>
           </div>
         </div>
+        <% } %>
 
-        <div class="course-card">
+        <!-- <div class="course-card">
           <div class="card-top">
             <div class="card-thumbnail">
               <img src="/assets/course-card-img-1.png" alt="course-image" />
@@ -174,9 +173,10 @@
               </button>
             </form>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
+    <% } %>
 
     <!-- encourage pg -->
     <section class="encourage-pg">
@@ -287,7 +287,7 @@
     <section class="detailed-about">
       <a id="about-us"></a>
       <div class="top">
-        <img src="/assets/demo-img-1.jpg" alt="demo-img" />
+        <img src="/assets/demo-img-1.png" alt="demo-img" />
         <div class="highlight">
           <h2 class="secondary-clr">About us</h2>
           <p>

@@ -1,10 +1,25 @@
 const express = require("express");
-// const mongoose = require("mongoosee");
+const mongoose = require("mongoose");
 const path = require("path");
 const ejsMate = require("ejs-mate");
+const Course = require("./model/course.js");
 
 const app = express();
 const PORT = 3000;
+
+const MongoURL = "mongodb://127.0.0.1:27017/alhaseebinstitute";
+
+main()
+  .then(() => {
+    console.log("Connected to DB");
+  })
+  .catch((err) => {
+    console.log(`DB_Error ----- ${err}`);
+  });
+
+async function main() {
+  await mongoose.connect(MongoURL);
+}
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -14,14 +29,32 @@ app.use(express.urlencoded({ extended: true }));
 
 app.engine("ejs", ejsMate);
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
   // res.send("Welcome to the root route!");
-  res.render("index.ejs");
+  const courses = await Course.find();
+
+  console.log(courses);
+  res.render("index.ejs", { courses });
 });
 
-app.get("/courses", (req, res) => {
+app.get("/courses/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const course = await Course.findById(id);
   // res.send("Welcome to the course route!");
-  res.render("course.ejs");
+  res.render("course.ejs", { course });
+});
+
+app.get("/new", (req, res) => {
+  res.render("new.ejs");
+});
+
+app.post("/new", async (req, res) => {
+  const newCourse = Course.insertOne(req.body.course);
+
+  await newCourse.save;
+  console.log(newCourse);
+  res.redirect("/");
 });
 
 app.listen(PORT, () => {

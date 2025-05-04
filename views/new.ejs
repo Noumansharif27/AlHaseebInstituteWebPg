@@ -1,0 +1,68 @@
+<%- layout("boilerplate") %>
+<section class="course_form">
+  <div class="form">
+    <h2>Book Free Trial Appointment</h2>
+    <p>
+      Fill in the form & The assigned tutor will contact you to confirm the
+      appointment of free trial lesson with you.
+    </p>
+    <form action="/new" method="post">
+      <div>
+        <label for="name">Course Full Name</label>
+        <input
+          type="text"
+          name="course[name]"
+          id="name"
+          placeholder="Enter Name"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="Image">Image</label>
+        <input
+          type="text"
+          name="course[image]"
+          id="Image"
+          placeholder="Your Image (ex. Hamid@gmail.com)"
+        />
+      </div>
+
+      <div>
+        <label for="Description">Description</label>
+        <textarea
+          name="course[description]"
+          id="Description"
+          cols="35"
+          rows="8"
+          placeholder="Enter Description"
+          required
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="Price">Price</label>
+        <input
+          type="number"
+          name="course[price]"
+          id="Price"
+          placeholder="Enter Price"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="Tutor">Tutor</label>
+        <input
+          type="text"
+          name="course[tutor]"
+          id="Tutor"
+          placeholder="Enter Tutor"
+          required
+        />
+      </div>
+
+      <button class="primary-btn">Submit</button>
+    </form>
+  </div>
+</section>
