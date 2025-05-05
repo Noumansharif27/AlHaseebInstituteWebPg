@@ -414,6 +414,29 @@ body {
   border-radius: 50%;
 }
 
+.footer .footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem 0.5rem 1rem;
+}
+
+.footer-bottom .dev-detail {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.footer-bottom .dev-detail .dev-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom .dev-detail .dev-social i {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* course review page */
 .course-review {
   height: 75dvh;
@@ -975,7 +998,7 @@ h3 {
 /* Course Form */
 
 .course_form {
-  height: 100dvh;
+  height: 120dvh;
   width: 100dvw;
   background-image: url("/assets/course_form.png");
   /* background-position: center; */
