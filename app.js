@@ -41,8 +41,9 @@ app.get("/courses/:id", async (req, res) => {
   const { id } = req.params;
 
   const course = await Course.findById(id);
+  const allCourses = await Course.find();
   // res.send("Welcome to the course route!");
-  res.render("course.ejs", { course });
+  res.render("course.ejs", { course, allCourses });
 });
 
 app.get("/new", (req, res) => {

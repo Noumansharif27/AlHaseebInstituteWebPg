@@ -384,23 +384,12 @@
 
   .sign-up-pg {
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   .sign-up-pg .left-pg,
   .sign-up-pg .sign-up-form,
   .sign-up-pg img {
-    width: 48%;
-  }
-
-  .footer-top {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .footer .about,
-  .footer .link-category,
-  .footer .contact-us {
     width: 48%;
   }
 }
@@ -434,6 +423,7 @@
   }
 
   .sign-up-pg .sign-up-form {
-    width: 30%;
+    width: 25%;
+    height: 65%;
   }
 }

@@ -1,300 +1,183 @@
 <%- layout("boilerplate") %>
+<!-- Course detail pg  -->
+<body>
+  <div class="course-detail-pg-main">
+    <section class="course-detail-pg">
+      <img
+        src="\assets\Ramadhan Kareem (Banner (Landscape)) (1000 X 330 Mm) - 1 - Edited.png"
+        alt="he"
+      />
+      <div class="course-detail-hero-section">
+        <div class="course-detail">
+          <h1><%= course.name %></h1>
+          <p><%= course.description %></p>
 
-<body class="course-detail-pg-main">
-  <section class="course-detail-pg">
-    <img
-      src="\assets\Ramadhan Kareem (Banner (Landscape)) (1000 X 330 Mm) - 1 - Edited.png"
-      alt="he"
-    />
-    <div class="course-detail-hero-section">
-      <div class="course-detail">
-        <h1><%= course.name %></h1>
-        <p><%= course.description %></p>
+          <div class="social">
+            <a href="https://www.facebook.com/nouman.sharifgul/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/al_haseeb.institute/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https:api.whatsapp.com/send/?phone=+92077890953&text$app_absent=0"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="social">
-          <a href="https://www.facebook.com/nouman.sharifgul/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/al_haseeb.institute/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https:api.whatsapp.com/send/?phone=+92077890953&text$app_absent=0"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
+    <div class="course-card">
+      <img src="<%= course.image %>" alt="background_img" />
+      <div class="layer">
+        <h2><%= course.name %></h2>
+        <div class="cards">
+          <div class="course-banner banner">
+            <img src="<%= course.image %>" alt="course_banner" />
+          </div>
+          <div class="content-banner banner">
+            <img
+              src="/assets/course_feature_poster.png"
+              alt="course_feature_poster"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <div class="course-card">
-    <div class="layer">
-      <h2><%= course.name %></h2>
+    <section class="course_form">
+      <div class="form">
+        <h2>Book Free Trial Appointment</h2>
+        <p>
+          Fill in the form & The assigned tutor will contact you to confirm the
+          appointment of free trial lesson with you.
+        </p>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Your Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Name" />
+          </div>
+
+          <div>
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email (ex. Hamid@gmail.com)"
+            />
+          </div>
+
+          <div>
+            <label for="number">Your Number</label>
+            <input
+              type="text"
+              name="number"
+              id="number"
+              placeholder="Enter Number"
+            />
+          </div>
+
+          <div>
+            <label for="country">Enter Your Country</label>
+            <input
+              type="text"
+              name="country"
+              id="country"
+              placeholder="Enter Country"
+            />
+          </div>
+
+          <div>
+            <label for="dropdown">Choose Course:</label>
+            <select name="courses" id="dropdown">
+              <option value="Noorani Qaida">Noorani Qaida</option>
+              <option value="Quran Recitation">Quran Recitation</option>
+              <option value="Quran Memorization">Quran Memorization</option>
+              <option value="Tajweed Course">Tajweed Course</option>
+              <option value="Quran with Tafseer">Quran with Tafseer</option>
+              <option value="Basic islamic course">Basic Islamic Course</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="note">Enter Note(Optional)</label>
+            <textarea
+              name="note"
+              id="note"
+              cols="35"
+              rows="8"
+              placeholder="Enter Note"
+            ></textarea>
+          </div>
+
+          <button class="primary-btn">Submit</button>
+        </form>
+      </div>
+      <div class="courses-poster">
+        <h2>Featured Course</h2>
+        <div class="poster">
+          <img src="/assets/qaida-thumbnail-demo.jpg" alt="poster_img" />
+        </div>
+      </div>
+    </section>
+
+    <section class="course-material">
+      <div class="material">
+        <h2>In the Noorani Qaida course, you will learn:</h2>
+        <ul>
+          <li>Arabic Alphabet Recognition</li>
+          <li>Tajweed Rules</li>
+          <li>Word Formation & Fluency</li>
+          <li>Correct Pronunciation & Harakat</li>
+          <li>Preparation for Quran Reading</li>
+          <li>Strengthens Tajweed Application</li>
+          <li>Boosts Memorization Skills</li>
+          <li>Builds Confidence in Recitation</li>
+          <li>Prepares for Advanced Quranic Studies</li>
+          <li>Vowels</li>
+          <li>Shaddah Madd – Lengthening</li>
+          <li>AlifulWasl rules</li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="/assets/noorani-qaida - Edited.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+      <a id="courses"></a>
+      <% if(allCourses) { %>
+      <div class="course-pg-heading">
+        <h2>Course Catagories</h2>
+      </div>
       <div class="cards">
-        <div class="course-banner banner">
-          <img src="<%= course.image %>" alt="course_banner" />
+        <% for( let course of allCourses ) { %>
+        <div class="course-card">
+          <div class="card-top">
+            <div class="card-thumbnail">
+              <img src="<%= course.image %>" alt="course-image" />
+            </div>
+          </div>
+          <div class="card-bottom">
+            <h2 class="card-title"><%= course.name %></h2>
+            <div class="card-description">
+              <p><%= course.description %></p>
+            </div>
+
+            <form action="/courses/<%=course. _id %>" method="get">
+              <button class="card-btn primary-btn" type="_blank">
+                Course Details
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="content-banner banner">
-          <img
-            src="/assets/course_feature_poster.png"
-            alt="course_feature_poster"
-          />
-        </div>
+        <% } %>
       </div>
-    </div>
+      <% } %>
+    </section>
   </div>
-
-  <section class="course_form">
-    <div class="form">
-      <h2>Book Free Trial Appointment</h2>
-      <p>
-        Fill in the form & The assigned tutor will contact you to confirm the
-        appointment of free trial lesson with you.
-      </p>
-      <form action="#" method="post">
-        <div>
-          <label for="name">Your Full Name</label>
-          <input type="text" name="name" id="name" placeholder="Enter Name" />
-        </div>
-
-        <div>
-          <label for="email">Your Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email (ex. Hamid@gmail.com)"
-          />
-        </div>
-
-        <div>
-          <label for="number">Your Number</label>
-          <input
-            type="text"
-            name="number"
-            id="number"
-            placeholder="Enter Number"
-          />
-        </div>
-
-        <div>
-          <label for="country">Enter Your Country</label>
-          <input
-            type="text"
-            name="country"
-            id="country"
-            placeholder="Enter Country"
-          />
-        </div>
-
-        <div>
-          <label for="dropdown">Choose Course:</label>
-          <select name="courses" id="dropdown">
-            <option value="Noorani Qaida">Noorani Qaida</option>
-            <option value="Quran Recitation">Quran Recitation</option>
-            <option value="Quran Memorization">Quran Memorization</option>
-            <option value="Tajweed Course">Tajweed Course</option>
-            <option value="Quran with Tafseer">Quran with Tafseer</option>
-            <option value="Basic islamic course">Basic Islamic Course</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="note">Enter Note(Optional)</label>
-          <textarea
-            name="note"
-            id="note"
-            cols="35"
-            rows="8"
-            placeholder="Enter Note"
-          ></textarea>
-        </div>
-
-        <button class="primary-btn">Submit</button>
-      </form>
-    </div>
-    <div class="courses-poster">
-      <h2>Featured Course</h2>
-      <div class="poster">
-        <img src="/assets/qaida-thumbnail-demo.jpg" alt="poster_img" />
-      </div>
-    </div>
-  </section>
-
-  <section class="course-material">
-    <div class="material">
-      <h2>In the Noorani Qaida course, you will learn:</h2>
-      <ul>
-        <li>Arabic Alphabet Recognition</li>
-        <li>Tajweed Rules</li>
-        <li>Word Formation & Fluency</li>
-        <li>Correct Pronunciation & Harakat</li>
-        <li>Preparation for Quran Reading</li>
-        <li>Strengthens Tajweed Application</li>
-        <li>Boosts Memorization Skills</li>
-        <li>Builds Confidence in Recitation</li>
-        <li>Prepares for Advanced Quranic Studies</li>
-        <li>Vowels</li>
-        <li>Shaddah Madd – Lengthening</li>
-        <li>AlifulWasl rules</li>
-      </ul>
-    </div>
-
-    <div>
-      <img src="/assets/noorani-qaida - Edited.png" alt="" />
-    </div>
-  </section>
-
-  <!-- Courses Section -->
-  <section class="courses">
-    <a id="courses"></a>
-    <div class="course-pg-heading">
-      <h2>Course Catagories</h2>
-    </div>
-    <div class="cards">
-      <div class="course-card">
-        <div class="card-top">
-          <div class="card-thumbnail">
-            <img src="/assets/course-card-img-0.png" alt="course-image" />
-          </div>
-        </div>
-        <div class="card-bottom">
-          <h2 class="card-title">Norani Qaida</h2>
-          <div class="card-description">
-            <p>
-              Norani Qaida is the first step in Quran learning, easing
-              recitation with correct pronunciation, Arabic letters, and tajweed
-              mastery.
-            </p>
-          </div>
-
-          <form action="/courses" method="get">
-            <button class="card-btn primary-btn" type="_blank">
-              Course Details
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="card-top">
-          <div class="card-thumbnail">
-            <img src="/assets/course-card-img-1.png" alt="course-image" />
-          </div>
-        </div>
-        <div class="card-bottom">
-          <h2 class="card-title">Norani Qaida</h2>
-          <div class="card-description">
-            <p>
-              Norani Qaida is the first step in Quran learning, easing
-              recitation with correct pronunciation, Arabic letters, and tajweed
-              mastery.
-            </p>
-          </div>
-
-          <form action="/courses" method="get">
-            <button class="card-btn primary-btn" type="_blank">
-              Course Details
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="card-top">
-          <div class="card-thumbnail">
-            <img src="/assets/course-card-img-2.png" alt="course-image" />
-          </div>
-        </div>
-        <div class="card-bottom">
-          <h2 class="card-title">Norani Qaida</h2>
-          <div class="card-description">
-            <p>
-              Norani Qaida is the first step in Quran learning, easing
-              recitation with correct pronunciation, Arabic letters, and tajweed
-              mastery.
-            </p>
-          </div>
-
-          <form action="/courses" method="get">
-            <button class="card-btn primary-btn" type="_blank">
-              Course Details
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="card-top">
-          <div class="card-thumbnail">
-            <img src="/assets/course-card-img-3.png" alt="course-image" />
-          </div>
-        </div>
-        <div class="card-bottom">
-          <h2 class="card-title">Norani Qaida</h2>
-          <div class="card-description">
-            <p>
-              Norani Qaida is the first step in Quran learning, easing
-              recitation with correct pronunciation, Arabic letters, and tajweed
-              mastery.
-            </p>
-          </div>
-
-          <form action="/courses" method="get">
-            <button class="card-btn primary-btn" type="_blank">
-              Course Details
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="card-top">
-          <div class="card-thumbnail">
-            <img src="/assets/course-card-img-4.png" alt="course-image" />
-          </div>
-        </div>
-        <div class="card-bottom">
-          <h2 class="card-title">Norani Qaida</h2>
-          <div class="card-description">
-            <p>
-              Norani Qaida is the first step in Quran learning, easing
-              recitation with correct pronunciation, Arabic letters, and tajweed
-              mastery.
-            </p>
-          </div>
-
-          <form action="/courses" method="get">
-            <button class="card-btn primary-btn" type="_blank">
-              Course Details
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="card-top">
-          <div class="card-thumbnail">
-            <img src="/assets/course-card-img-5.png" alt="course-image" />
-          </div>
-        </div>
-        <div class="card-bottom">
-          <h2 class="card-title">Norani Qaida</h2>
-          <div class="card-description">
-            <p>
-              Norani Qaida is the first step in Quran learning, easing
-              recitation with correct pronunciation, Arabic letters, and tajweed
-              mastery.
-            </p>
-          </div>
-
-          <form action="/courses" method="get">
-            <button class="card-btn primary-btn" type="_blank">
-              Course Details
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
 </body>
