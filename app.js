@@ -58,6 +58,19 @@ app.post("/new", async (req, res) => {
   res.redirect("/");
 });
 
+app.get("/courses/:id/edit", async (req, res) => {
+  const { id } = req.params;
+  const course = await Course.findById(id);
+  res.render("edit.ejs", { course });
+});
+
+app.post("/courses/:id", async (req, res) => {
+  const { id } = req.params;
+  const course = await Course.findByIdAndUpdate(id, req.body.course);
+  await course.save;
+  res.redirect(`/courses/${id}`);
+});
+
 app.listen(PORT, () => {
   console.log(`App is listening at PORT: ${PORT}`);
 });
