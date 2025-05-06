@@ -33,7 +33,7 @@ app.get("/", async (req, res) => {
   // res.send("Welcome to the root route!");
   const courses = await Course.find();
 
-  console.log(courses);
+  // console.log(courses);
   res.render("index.ejs", { courses });
 });
 
