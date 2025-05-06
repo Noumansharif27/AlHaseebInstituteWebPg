@@ -71,6 +71,11 @@ app.post("/courses/:id", async (req, res) => {
   res.redirect(`/courses/${id}`);
 });
 
+// Plans route
+app.get("/plans", (req, res) => {
+  res.render("plans.ejs");
+});
+
 app.listen(PORT, () => {
   console.log(`App is listening at PORT: ${PORT}`);
 });
