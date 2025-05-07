@@ -238,7 +238,7 @@ body {
 }
 
 .course-pg-heading h2 {
-  width: 25%;
+  display: inline-block;
   border: 1px solid var(--primary-color);
   padding: 1.5rem 2.5rem;
   position: relative;
@@ -253,7 +253,7 @@ body {
   background-color: var(--primary-color);
   z-index: 5;
   position: absolute;
-  left: -40%;
+  left: -43%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -265,7 +265,7 @@ body {
   background-color: var(--primary-color);
   z-index: 5;
   position: absolute;
-  left: 140%;
+  left: 143%;
   top: 50%;
   transform: translate(-50%, -50%);
 }

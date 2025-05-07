@@ -76,6 +76,11 @@ app.get("/plans", (req, res) => {
   res.render("plans.ejs");
 });
 
+// Donation route
+app.get("/donation", (req, res) => {
+  res.render("donation.ejs");
+});
+
 app.listen(PORT, () => {
   console.log(`App is listening at PORT: ${PORT}`);
 });
