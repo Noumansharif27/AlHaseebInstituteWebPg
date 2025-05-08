@@ -1233,15 +1233,29 @@ h3 {
 }
 
 .donation-main-pg .headline {
-  height: 15rem;
+  height: 13rem;
   width: 100%;
-  background-color: #075e54;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.donation-main-pg .headline h2 {
+  font-size: 2.8rem;
+}
+
+.donation-main-pg .headline p {
+  font-size: 1.2rem;
+  opacity: 0.7;
 }
 
 .donation-main-pg .donation-card {
   height: 90%;
   width: 100%;
-  background-color: #8a2323;
+  /* background-color: #8a2323; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1249,6 +1263,10 @@ h3 {
 }
 
 .donation-main-pg .donation-card img {
-  height: 60%;
-  width: 25rem;
+  /* height: 70%; */
+  width: 30rem;
+}
+
+.donation-main-pg .donation-card .right-card img {
+  border-left: 1px solid #000;
 }
