@@ -52,6 +52,8 @@ body {
   padding: 1rem 4rem 1rem;
   background-color: var(--primary-nav-bar);
   color: #fff;
+  position: fixed;
+  z-index: 99;
 }
 
 .index_navbar {
@@ -1205,7 +1207,7 @@ h3 {
   /* width: 70%;
   height: 4rem; */
   padding: 0.5rem 1.5rem;
-  background-color: var(--secondary-color);
+  background-color: var(--se-condary-color);
   border: 1px solid var(--secondary-color);
   color: var(--primary-color);
   border-radius: 2rem;
@@ -1225,7 +1227,9 @@ h3 {
 
 .donation-main-pg {
   width: 100%;
-  height: 150vh;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .donation-main-pg .top {
@@ -1287,4 +1291,20 @@ h3 {
   bottom: 2%;
   left: 15%;
   transform: translate(-50%, -50%);
+}
+
+.donation-main-pg .bottom {
+  width: 100%;
+  height: 30%;
+  /* background-color: #075e54; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.donation-main-pg .bottom img {
+  height: 25rem;
+  width: 28---------------rem;
+  object-fit: fill;
 }
