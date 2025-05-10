@@ -125,27 +125,24 @@
     </section>
 
     <section class="course-material">
+      <% if(course.additionalDetails && course.additionalDetails.length > 0) {
+      %>
       <div class="material">
-        <h2>In the Noorani Qaida course, you will learn:</h2>
+        <h2>In the <%= course.name %> course, you will learn:</h2>
         <ul>
-          <li>Arabic Alphabet Recognition</li>
-          <li>Tajweed Rules</li>
-          <li>Word Formation & Fluency</li>
-          <li>Correct Pronunciation & Harakat</li>
-          <li>Preparation for Quran Reading</li>
-          <li>Strengthens Tajweed Application</li>
-          <li>Boosts Memorization Skills</li>
-          <li>Builds Confidence in Recitation</li>
-          <li>Prepares for Advanced Quranic Studies</li>
-          <li>Vowels</li>
-          <li>Shaddah Madd – Lengthening</li>
-          <li>AlifulWasl rules</li>
+          <% course.additionalDetails.forEach(detail => { %>
+          <li><%= detail %></li>
+          <% }); %>
         </ul>
       </div>
 
       <div>
-        <img src="/assets/noorani-qaida - Edited.png" alt="" />
+        <% allCourses.forEach(eachCourse => { %>
+        <img src="<%= eachCourse.secondaryImg %>" alt="Secondary_img" />
+        <% }); %>
       </div>
+
+      <% } %>
     </section>
 
     <!-- Courses Section -->

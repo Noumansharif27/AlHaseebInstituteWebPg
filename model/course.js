@@ -22,6 +22,14 @@ const CourseSchema = Schema({
     type: String,
     requied: true,
   },
+  additionalDetails: {
+    type: [String],
+    required: true,
+  },
+  secondaryImg: {
+    type: String,
+    required: true,
+  },
 });
 
 const Course = mongoose.model("course", CourseSchema);
