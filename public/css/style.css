@@ -46,7 +46,7 @@ body {
 }
 
 .header {
-  height: 25dvh;
+  height: 20dvh;
   width: 100dvw;
   border: 1px solid #000;
   padding: 1rem 4rem 1rem;
@@ -111,11 +111,11 @@ body {
 }
 
 .index_navbar .socialmedia li {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .index_navbar .socialmedia li i {
-  scale: 2;
+  scale: 1.2;
 }
 
 .index_navbar .navlinks {
@@ -126,11 +126,12 @@ body {
 }
 
 .index_navbar .navlinks .logo {
-  height: 5rem;
-  width: 5.5rem;
+  height: 3rem;
+  width: 3.5rem;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
+  margin-top: 1rem;
 }
 
 .index_navbar .navlinks .logo img {
@@ -167,12 +168,12 @@ body {
 
 .whatsapp i {
   color: #075e54;
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .instagram img {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 /* Hero page */
 
@@ -1106,7 +1107,7 @@ h3 {
   position: absolute;
   top: 0;
   left: 10;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 .course_form .courses-poster h2 {
