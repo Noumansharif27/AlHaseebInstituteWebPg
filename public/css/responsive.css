@@ -20,6 +20,13 @@
     box-sizing: border-box;
   }
 
+  /* Index-navbar */
+
+  /* mobile-navbar */
+  .mobile-navbar {
+    display: block;
+  }
+
   body {
     overflow-x: hidden;
     font-size: 14px; /* Base font size for mobile */
@@ -423,7 +430,7 @@
   }
 
   .sign-up-pg .sign-up-form {
-    width: 25%;
+    /* width: 25%; */
     height: 65%;
   }
 }

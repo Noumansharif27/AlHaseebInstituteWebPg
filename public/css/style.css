@@ -27,6 +27,7 @@
 body {
   overflow-x: hidden;
   transition: scroll 0.5s ease-in 1s;
+  padding-top: 8rem;
 }
 
 :root {
@@ -53,6 +54,7 @@ body {
   background-color: var(--primary-nav-bar);
   color: #fff;
   position: fixed;
+  top: 0;
   z-index: 99;
 }
 
@@ -67,14 +69,6 @@ body {
 .index_navbar li {
   list-style: none;
 }
-
-/* .index_navbar li:hover {
-  color: var(--primary-color);
-}
-
-.index_navbar a:hover {
-  color: var(--primary-color);
-} */
 
 .index_navbar ul {
   display: flex;
@@ -175,6 +169,12 @@ body {
   height: 1.5rem;
   width: 1.5rem;
 }
+
+/* Mobile navbar */
+.mobile-navbar {
+  display: none;
+}
+
 /* Hero page */
 
 .hero-page {
@@ -491,7 +491,7 @@ body {
   width: 100dvw;
   background-color: #075e54;
   margin-top: 5rem;
-  padding: 3rem 4rem 3rem 8rem;
+  padding: 3rem 4rem 5rem 8rem;
   color: #fff;
   font-family: "fairyRegular";
 }
@@ -647,14 +647,15 @@ body {
 }
 
 .sign-up-pg .sign-up-form {
-  width: 30%;
-  height: 80%;
+  width: 25rem;
+  min-height: 90%;
   background-color: #fff;
   color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
 .sign-up-pg .sign-up-form h3 {
