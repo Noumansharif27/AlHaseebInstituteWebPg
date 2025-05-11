@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const { data } = require("./data.js");
 const Course = require("../model/course.js");
 
-const MongoURL = "mongodb://127.0.0.1:27017/alhaseebinstitute";
+const MongoURL =
+  "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman";
 
 main()
   .then(() => {
@@ -21,7 +22,7 @@ initilizeData()
     console.log("Data was Initilized.");
   })
   .catch((err) => {
-    console.log(`Something happend whie initilization of data.`);
+    console.log(`The following Error occure while performing the task: ${err}`);
   });
 
 async function initilizeData() {
