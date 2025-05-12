@@ -924,9 +924,8 @@ h3 {
 }
 
 .course-card {
-  height: 100dvh;
+  /* height: 100dvh; */
   width: 100dvw;
-  /* background-image: url("/assets/Beige Minimalist Simple Islamic Quran Verse Instagram Post.png"); */
   background-position: center;
   position: relative;
 }

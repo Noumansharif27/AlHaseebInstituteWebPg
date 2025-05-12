@@ -147,23 +147,22 @@
     object-fit: cover;
   }
 
-  .courses .course-card {
-    width: 25dvw;
+  /* .courses .course-card {
     min-height: 80dvh;
-    overflow: hidden;
-    font-family: "fairyRegular";
-    margin-bottom: 2rem;
-  }
-
-  .courses .course-card .card-top {
-    overflow: hidden;
+    margin-bottom: 0.5rem;
   }
 
   .courses .course-card .card-thumbnail {
-    width: 100%;
-    height: 70dvh;
-    background-color: var(--secondary-color);
+    height: 80%;
   }
+
+  .courses .course-card .card-bottom {
+    min-height: 25%;
+    width: 100%;
+    background-color: #075e54;
+    padding: 0.5rem 2rem 2rem 2rem;
+    text-align: center;
+  } */
 
   /* About Us Section */
   .about-us {
@@ -203,7 +202,7 @@
 
   .courses .cards {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.1rem;
   }
 
   .courses .course-card {
@@ -212,7 +211,7 @@
   }
 
   .courses .course-card .card-thumbnail {
-    height: 30dvh;
+    height: 40dvh;
   }
 
   /* Encourage Page */
