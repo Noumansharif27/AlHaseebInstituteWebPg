@@ -402,6 +402,10 @@
     white-space: normal;
   }
 
+  .sign-up-pg .left-pg li {
+    margin-left: 1rem;
+  }
+
   .sign-up-pg .sign-up-form input,
   .sign-up-pg .sign-up-form textarea {
     width: 100%;
