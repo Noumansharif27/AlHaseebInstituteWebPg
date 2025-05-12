@@ -243,8 +243,8 @@
   }
 
   .encourage-pg .left .scroll-icons .icon {
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 6.5rem;
     margin: 0.5rem;
   }
 
@@ -295,10 +295,20 @@
     margin-bottom: 0.5rem;
   }
 
+  .encourage-pg .right div:first-child {
+    margin-left: 0rem;
+  }
+
   /* Course Review */
   .course-review {
     height: auto;
     padding: 1rem;
+  }
+  .course-review img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
   }
 
   .course-review h3 {
