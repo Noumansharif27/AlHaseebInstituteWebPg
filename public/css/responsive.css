@@ -143,6 +143,28 @@
     height: 40dvh;
   }
 
+  .hero-page .hero-banner img {
+    object-fit: cover;
+  }
+
+  .courses .course-card {
+    width: 25dvw;
+    min-height: 80dvh;
+    overflow: hidden;
+    font-family: "fairyRegular";
+    margin-bottom: 2rem;
+  }
+
+  .courses .course-card .card-top {
+    overflow: hidden;
+  }
+
+  .courses .course-card .card-thumbnail {
+    width: 100%;
+    height: 70dvh;
+    background-color: var(--secondary-color);
+  }
+
   /* About Us Section */
   .about-us {
     height: auto;
