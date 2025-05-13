@@ -1,0 +1,89 @@
+<%- layout("boilerplate") %>
+<body>
+  <section class="course_form">
+    <div class="pricing-banners">
+      <div class="banner">
+        <div class="top">
+          <h2 class="price">FREE</h2>
+          <p class="duration">3 Days</p>
+        </div>
+        <ul class="features">
+          <li><strong>&check;</strong> Free Trial Classes</li>
+          <li><strong>&check;</strong> 30 Minutes/Class</li>
+          <li><strong>&check;</strong> Free Admission</li>
+          <li><strong>&check;</strong> Charges: None</li>
+        </ul>
+
+        <a href="/" class="btn">Start Free Trial</a>
+      </div>
+    </div>
+    <div class="form">
+      <h2>Free Trial Appointment</h2>
+      <p>
+        Fill in the form & The assigned tutor will contact you to confirm the
+        appointment of free trial lesson with you.
+      </p>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Your Full Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Name" />
+        </div>
+
+        <div>
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            name="freeTrial[email]"
+            id="email"
+            placeholder="Your Email (ex. Hamid@gmail.com)"
+          />
+        </div>
+
+        <div>
+          <label for="number">Your Number</label>
+          <input
+            type="text"
+            name="freeTrial[number]"
+            id="number"
+            placeholder="Enter Number"
+          />
+        </div>
+
+        <div>
+          <label for="country">Enter Your Country</label>
+          <input
+            type="text"
+            name="freeTrial[country]"
+            id="country"
+            placeholder="Enter Country"
+          />
+        </div>
+
+        <div>
+          <label for="dropdown">Choose Course:</label>
+          <select name="freeTrial[courses]" id="dropdown">
+            <option value="Noorani Qaida">Noorani Qaida</option>
+            <option value="Quran Recitation">Quran Recitation</option>
+            <option value="Quran Memorization">Quran Memorization</option>
+            <option value="Tajweed Course">Tajweed Course</option>
+            <option value="Quran with Tafseer">Quran with Tafseer</option>
+            <option value="Basic islamic course">Basic Islamic Course</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="note">Enter Note(Optional)</label>
+          <textarea
+            name="freeTrial[note]"
+            id="note"
+            cols="35"
+            rows="8"
+            placeholder="Enter Note"
+          ></textarea>
+        </div>
+
+        <button class="primary-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>

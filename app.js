@@ -84,6 +84,11 @@ app.get("/donation", (req, res) => {
   res.render("donation.ejs");
 });
 
+// Free Trial
+app.get("/freeTrial", (req, res) => {
+  res.render("freeTrial.ejs");
+});
+
 app.listen(PORT, () => {
   console.log(`App is listening at PORT: ${PORT}`);
 });
