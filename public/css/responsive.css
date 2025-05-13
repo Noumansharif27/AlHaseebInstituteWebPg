@@ -147,23 +147,6 @@
     object-fit: cover;
   }
 
-  /* .courses .course-card {
-    min-height: 80dvh;
-    margin-bottom: 0.5rem;
-  }
-
-  .courses .course-card .card-thumbnail {
-    height: 80%;
-  }
-
-  .courses .course-card .card-bottom {
-    min-height: 25%;
-    width: 100%;
-    background-color: #075e54;
-    padding: 0.5rem 2rem 2rem 2rem;
-    text-align: center;
-  } */
-
   /* About Us Section */
   .about-us {
     height: auto;
@@ -303,12 +286,15 @@
   .course-review {
     height: auto;
     padding: 1rem;
+    position: relative;
   }
-  .course-review img {
-    width: 100%;
+  .course-review > img {
     height: 100%;
-    object-fit: fill;
-    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 0;
   }
 
   .course-review h3 {
@@ -414,7 +400,7 @@
   /* Footer */
   .footer {
     height: auto;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .footer-top {
@@ -423,10 +409,29 @@
     gap: 1rem;
   }
 
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
   .footer .about,
   .footer .link-category,
   .footer .contact-us {
     width: 100%;
+  }
+
+  .footer-bottom .dev-detail {
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .footer-bottom h3 {
+    opacity: 0.6;
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom .dev-detail li i:hover {
+    color: var(--secondary-color);
   }
 }
 
