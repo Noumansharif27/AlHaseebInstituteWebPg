@@ -476,6 +476,53 @@
   .course_form .form select {
     min-width: 18rem;
   }
+
+  .course_form .form div textarea {
+    min-width: 80%;
+  }
+
+  .course_form .form p {
+    opacity: 0.8;
+    position: relative;
+  }
+
+  .course_form .form p::before {
+    position: absolute;
+    content: "";
+    left: -3%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100%;
+    background-color: #ffffff73;
+    border: 1rem;
+  }
+
+  .course_form .courses-poster h2 {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+  }
+
+  .course_form .courses-poster {
+    height: 25rem;
+  }
+
+  .course_form .courses-poster .poster {
+    height: 20rem;
+    width: 20rem;
+    position: relative;
+  }
+
+  /* Course-material */
+  .course-material {
+    height: auto;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .material {
+    width: 20rem;
+  }
 }
 
 /* Tablet and Larger Screens */
