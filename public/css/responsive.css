@@ -450,25 +450,31 @@
 
   .course-card .layer .cards {
     width: 80%;
-    height: auto;
-    /* background-color: #bb5f5f; */
     flex-direction: column;
-    gap: 4rem;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
     margin-bottom: 2rem;
   }
 
   .course-card .layer .cards .banner {
-    width: 20rem;
-    margin: 2rem;
-    -right: 2rem;
+    min-width: 20rem !important; /* Ensure it takes the full width of the parent */
+    margin-left: -1rem;
   }
 
-  .course-card .layer .cards .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  /* Course Form */
+
+  .course_form {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .course_form .form {
+    width: 20rem;
+  }
+
+  .course_form .form div input,
+  .course_form .form div textarea,
+  .course_form .form select {
+    min-width: 18rem;
   }
 }
 

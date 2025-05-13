@@ -996,7 +996,7 @@ h3 {
 .course-card .layer .cards .banner {
   min-width: 25rem;
   height: 90%;
-  background-color: var(--primary-color);
+  background-color: transparent;
 }
 
 .course-card .layer .cards .banner img {
