@@ -7,9 +7,8 @@ const Course = require("./model/course.js");
 const app = express();
 const PORT = 3000;
 
-const MongoURL =
-  // "mongodb://127.0.0.1:27017/alhaseebinstitute";
-  "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman"; //"mongodb://127.0.0.1:27017/alhaseebinstitute"
+const MongoURL = "mongodb://127.0.0.1:27017/alhaseebinstitute";
+// "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman"; //"mongodb://127.0.0.1:27017/alhaseebinstitute"
 
 main()
   .then(() => {
@@ -45,7 +44,7 @@ app.get("/courses/:id", async (req, res) => {
   const course = await Course.findById(id);
   const allCourses = await Course.find();
   // res.send("Welcome to the course route!");
-  console.log(allCourses);
+  // console.log(allCourses);
   res.render("course.ejs", { course, allCourses });
 });
 
