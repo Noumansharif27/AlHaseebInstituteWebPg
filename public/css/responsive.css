@@ -447,6 +447,29 @@
     font-size: 1.2rem;
     padding: 0.35rem;
   }
+
+  .course-card .layer .cards {
+    width: 80%;
+    height: auto;
+    /* background-color: #bb5f5f; */
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .course-card .layer .cards .banner {
+    width: 20rem;
+    margin: 2rem;
+    -right: 2rem;
+  }
+
+  .course-card .layer .cards .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Tablet and Larger Screens */
