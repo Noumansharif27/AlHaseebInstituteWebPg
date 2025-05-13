@@ -97,6 +97,7 @@
     top: 0;
     right: 110%;
     /* right: 30%; */
+    transition: all 0.1s ease-out 0.3s;
   }
 
   .toogle-bar a {
@@ -568,6 +569,19 @@
 
   .donation-main-pg .bottom img {
     width: 100%;
+  }
+
+  /* Pricing */
+  .pricing-banners {
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner .btn {
+    left: 50%;
   }
 }
 
