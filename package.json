@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "v22.15.0"
+    "node": "v22.13.0"
   },
   "name": "alhaseebinstitutewebpg",
   "version": "1.0.0",
@@ -16,6 +16,7 @@
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^5.1.0",
-    "mongoose": "^8.14.1"
+    "mongoose": "^8.14.1",
+    "nodemailer": "^7.0.3"
   }
 }
