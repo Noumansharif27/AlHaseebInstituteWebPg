@@ -449,6 +449,13 @@
     padding: 0.35rem;
   }
 
+  .course-card .layer h2::before,
+  .course-card .layer h2::after {
+    content: "";
+    height: 0px;
+    width: 0px;
+  }
+
   .course-card .layer .cards {
     width: 80%;
     flex-direction: column;
