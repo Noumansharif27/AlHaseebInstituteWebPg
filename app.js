@@ -3,13 +3,14 @@ const mongoose = require("mongoose");
 const path = require("path");
 const ejsMate = require("ejs-mate");
 const Course = require("./model/course.js");
+const session = require("express-session");
+const flash = require("connect-flash");
 
 const app = express();
 const PORT = 3000;
 
-const MongoURL =
-  // "mongodb://127.0.0.1:27017/alhaseebinstitute";
-  "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman"; //"mongodb://127.0.0.1:27017/alhaseebinstitute"
+const MongoURL = "mongodb://127.0.0.1:27017/alhaseebinstitute";
+// "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman"; //"mongodb://127.0.0.1:27017/alhaseebinstitute"
 
 main()
   .then(() => {
@@ -28,6 +29,14 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use(
+  session({
+    secret: "secretcode",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+app.use(flash());
 
 app.engine("ejs", ejsMate);
 
@@ -58,6 +67,7 @@ app.post("/new", async (req, res) => {
 
   await newCourse.save;
   console.log(newCourse);
+  req.flash("success", "course created successfully");
   res.redirect("/");
 });
 
