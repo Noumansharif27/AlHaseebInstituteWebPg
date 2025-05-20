@@ -3,7 +3,7 @@ const { data } = require("./data.js");
 const Course = require("../model/course.js");
 
 const MongoURL = "mongodb://127.0.0.1:27017/alhaseebinstitute";
-// ("mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman");
+// "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman";
 
 main()
   .then(() => {

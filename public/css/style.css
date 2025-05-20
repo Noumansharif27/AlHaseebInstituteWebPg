@@ -120,7 +120,7 @@ body {
 }
 
 .index_navbar .navlinks .logo {
-  height: 3rem;
+  height: 3.2rem;
   width: 3.5rem;
   object-fit: cover;
   border-radius: 50%;
@@ -249,18 +249,7 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.course-pg-heading h2::before {
-  content: "";
-  width: 15rem;
-  height: 1px;
-  background-color: var(--primary-color);
-  z-index: 5;
-  position: absolute;
-  left: -43%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
+.course-pg-heading h2::before,
 .course-pg-heading h2::after {
   content: "";
   width: 15rem;
@@ -268,9 +257,16 @@ body {
   background-color: var(--primary-color);
   z-index: 5;
   position: absolute;
-  left: 143%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.course-pg-heading h2::before {
+  left: -43%;
+}
+
+.course-pg-heading h2::after {
+  left: 143%;
 }
 
 .courses .cards {
@@ -399,6 +395,10 @@ body {
   /* background-color: #fbe355; */
 }
 
+.footer .about strong {
+  color: var(--secondary-color);
+}
+
 .footer .footer-link-title-underline {
   margin-bottom: 1.5rem;
   position: relative;
@@ -418,7 +418,7 @@ body {
 }
 
 .footer a img {
-  height: 4rem;
+  height: 3.8rem;
   width: 4rem;
   border-radius: 50%;
 }
@@ -428,6 +428,10 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1rem 5rem 0.5rem 1rem;
+}
+
+.footer .footer-bottom h3 {
+  opacity: 0.5;
 }
 
 .footer-bottom .dev-detail {
@@ -821,7 +825,7 @@ h3 {
 
 .encourage-pg .consult-banner {
   position: absolute;
-  bottom: -30%;
+  bottom: -40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -894,7 +898,6 @@ h3 {
 .course-detail-hero-section {
   width: 100%;
   height: 100%;
-  /* background-image: url(".."); */
   color: #fff;
   display: flex;
   justify-content: center;
@@ -907,14 +910,14 @@ h3 {
 .course-detail-hero-section p {
   width: 50%;
   margin: 0 auto;
-  opacity: 0.7;
-  font-size: 1.2rem;
-  width: 100%;
+  opacity: 0.78;
+  font-size: 1.01rem;
+  width: 80%;
 }
 
 .course-detail-hero-section h1 {
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .course-detail-hero-section .social {
@@ -986,19 +989,20 @@ h3 {
 .course-card .layer h2::after {
   content: "";
   height: 1px;
-  width: 120%;
-  background-color: var(--primary-color);
+  width: 70%;
+  background-color: black;
   position: absolute;
+  z-index: 5;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .course-card .layer h2::before {
-  left: -60%;
+  left: -35%;
 }
 
 .course-card .layer h2::after {
-  right: -180%;
+  right: -105%;
 }
 
 .course-card .layer .cards .banner {
@@ -1018,7 +1022,7 @@ h3 {
 .course_form {
   height: 120dvh;
   width: 100dvw;
-  background-image: url("/assets/course_form.png");
+  background-image: url("/assets/alhaseeb-course-form.png");
   /* background-position: center; */
   padding: 1rem;
   display: flex;
@@ -1131,7 +1135,7 @@ h3 {
 
 .course-material {
   width: 100dvw;
-  height: 80dvh;
+  height: auto;
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
@@ -1164,8 +1168,7 @@ h3 {
 
 .course-secondary-imgs {
   width: 20rem;
-  height: 80%;
-  background-color: #075e54;
+  height: 90%;
 }
 
 .course-secondary-imgs img {

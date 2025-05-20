@@ -25,19 +25,29 @@ async function main() {
   await mongoose.connect(MongoURL);
 }
 
+const sessionOptions = {
+  secret: "secretcode",
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+  },
+};
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  session({
-    secret: "secretcode",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+app.use(session(sessionOptions));
 app.use(flash());
+app.use((req, res, next) => {
+  res.locals.errorMsg = req.flash("error");
+  res.locals.successMsg = req.flash("success");
+  next();
+});
 
 app.engine("ejs", ejsMate);
 
@@ -73,11 +83,17 @@ app.post("/new", async (req, res) => {
 });
 
 app.get("/courses/:id/edit", async (req, res) => {
+  const { password } = req.query;
   const { id } = req.params;
-  const course = await Course.findById(id);
-  res.render("edit.ejs", { course });
+  if ((password = "noumansharfgul")) {
+    const course = await Course.findById(id);
+    res.render("edit.ejs", { course });
+  } else {
+    res.send("you dont have permtion to do that opration.");
+  }
 });
 
+// Edit Route
 app.post("/courses/:id", async (req, res) => {
   const { id } = req.params;
   const course = await Course.findByIdAndUpdate(id, req.body.course);

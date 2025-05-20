@@ -1,7 +1,7 @@
 const courseData = [
   {
     name: "Noorani Qaida",
-    image: "/assets/course-card-img-0.png",
+    image: "/assets/alhaseeb-course-0.png",
     description:
       "Norani Qaida is the first step in Quran learning, easing recitation with correct pronunciation, Arabic letters, and tajweed mastery.",
     price: 40,
@@ -20,11 +20,11 @@ const courseData = [
       "Shaddah Madd – Lengthening",
       "AlifulWasl rules",
     ],
-    secondaryImg: "/assets/secondary-img-0.png",
+    secondaryImg: "/assets/alhaseeb-secondary-img-0.png",
   },
   {
     name: "Quran Reciatation",
-    image: "/assets/course-card-img-1.png",
+    image: "/assets/alhaseeb-course-1.png",
     description:
       "Learn how to Recite Quran correctly easier and faster than ever with professional Quran tutors.",
     price: 50,
@@ -40,11 +40,11 @@ const courseData = [
       "Students should first complete the Basic Noorani Qaida Course",
       "After Noorani Qaida, students can start reading Quran easily",
     ],
-    secondaryImg: "/assets/secondary-img-1.png",
+    secondaryImg: "/assets/alhaseeb-secondary-img-1.png",
   },
   {
     name: "Quran Memorization",
-    image: "/assets/course-card-img-2.png",
+    image: "/assets/alhaseeb-course-2.png",
     description:
       "Learn Quran memorization & Become a Hafiz/Hafiz of the Holy Quran through live memorizing classes.",
     price: 70,
@@ -60,11 +60,11 @@ const courseData = [
       "Tajweed integration from day one for correct recitation",
       "Progress tracking and weekly reports to keep you motivated",
     ],
-    secondaryImg: "/assets/secondary-img-2.png",
+    secondaryImg: "/assets/alhaseeb-secondary-img-2.png",
   },
   {
     name: "Quran Tafseer",
-    image: "/assets/course-card-img-3.png",
+    image: "/assets/alhaseeb-course-3.png",
     description:
       "Learn Quran Tafseer online and better understand the Quran with the best Islam & Quran scholars.",
     price: 70,
@@ -79,11 +79,11 @@ const courseData = [
       "Gradual progression leads students to complete understanding",
       "Perfect for students seeking deeper Quran comprehension",
     ],
-    secondaryImg: "/assets/secondary-img-3.png",
+    secondaryImg: "/assets/alhaseeb-secondary-img-3.png",
   },
   {
     name: "Quran with Tajweed",
-    image: "/assets/course-card-img-4.png",
+    image: "/assets/alhaseeb-course-4.png",
     description:
       "Read the Holy Quran with correct pronunciation. Get equipped with the learning of the Quran from professional and qualified Quran tutors.",
     price: 70,
@@ -101,11 +101,11 @@ const courseData = [
       "Gain ability to read Holy Quran with correct pronunciation after course completion",
       "Receive instruction from professional, qualified Quran tutors",
     ],
-    secondaryImg: "/assets/secondary-img-4.png",
+    secondaryImg: "/assets/alhaseeb-secondary-img-4.png",
   },
   {
     name: "Basic Islamic Course",
-    image: "/assets/course-card-img-5.png",
+    image: "/assets/alhaseeb-course-5.png",
     description:
       "Learn the Islam from basic, get comfertable with the teaching of quran and its rules.",
     price: 50,
@@ -123,7 +123,7 @@ const courseData = [
       "Islamic Manners: Proper ways of eating, drinking, sleeping, sneezing, thanking, and giving Salam",
       "Moral Guidance: Dangers of lying and blessings of truthfulness",
     ],
-    secondaryImg: "/assets/secondary-img-5.png",
+    secondaryImg: "/assets/alhaseeb-secondary-img-5.png",
   },
 ];
 
