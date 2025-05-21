@@ -9,9 +9,8 @@ const flash = require("connect-flash");
 const app = express();
 const PORT = 3000;
 
-const MongoURL =
-  // "mongodb://127.0.0.1:27017/alhaseebinstitute";
-  "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman"; //"mongodb://127.0.0.1:27017/alhaseebinstitute"
+const MongoURL = "mongodb://127.0.0.1:27017/alhaseebinstitute";
+// "mongodb+srv://noumansharifgul27:ZNOyvcs1YApA2TkE@nouman.laq4ja9.mongodb.net/?retryWrites=true&w=majority&appName=nouman"; //"mongodb://127.0.0.1:27017/alhaseebinstitute"
 
 main()
   .then(() => {
