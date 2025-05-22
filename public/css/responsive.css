@@ -590,6 +590,10 @@
   .banner .btn {
     left: 50%;
   }
+
+  .main-sidebar-whatsapp {
+    bottom: 5%;
+  }
 }
 
 /* Tablet and Larger Screens */

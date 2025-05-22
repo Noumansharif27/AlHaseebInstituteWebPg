@@ -1378,3 +1378,18 @@ h3 {
   bottom: 0;
   transform: translateX(-50%);
 }
+
+.main-sidebar-whatsapp {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  overflow: hidden;
+}
+
+.main-sidebar-whatsapp img {
+  height: 100%;
+  width: 100%;
+}
