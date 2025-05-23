@@ -116,9 +116,11 @@
       <div class="courses-poster">
         <h2>Featured Course</h2>
         <div class="poster">
-          <% allCourses.forEach(eachCourse => { %>
-          <img src="<%= eachCourse.image %>" alt="poster_img" />
-          <% }); %>
+          <div class="course-poster-imgs">
+            <% allCourses.forEach(eachCourse => { %>
+            <img src="<%= eachCourse.image %>" alt="poster_img" />
+            <% }); %>
+          </div>
         </div>
       </div>
     </section>
