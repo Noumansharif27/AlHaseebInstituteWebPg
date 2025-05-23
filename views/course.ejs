@@ -119,7 +119,9 @@
           <div class="course-poster-imgs">
             <% allCourses.forEach(eachCourse => { %>
             <img src="<%= eachCourse.image %>" alt="poster_img" />
-            <% }); %>
+            <% }); %> <% if(allCourses.length > 0) { %>
+            <img src="<%= allCourses[0].image %>" alt="poster_img" />
+            <% } %>
           </div>
         </div>
       </div>
