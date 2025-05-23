@@ -310,7 +310,7 @@
   .course-review .review-card {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 60dvh;
     top: auto;
     left: auto;
     transform: none;

@@ -491,6 +491,7 @@ body {
 
 .course-review .review-card .slider .review-slider img {
   object-fit: cover;
+  object-position: center;
   width: 100%;
 }
 
