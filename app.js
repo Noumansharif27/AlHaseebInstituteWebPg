@@ -5,6 +5,7 @@ const ejsMate = require("ejs-mate");
 const Course = require("./model/course.js");
 const session = require("express-session");
 const flash = require("connect-flash");
+const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = 3000;
@@ -115,6 +116,21 @@ app.get("/donation", (req, res) => {
 app.get("/freeTrial", (req, res) => {
   res.render("freeTrial.ejs");
 });
+
+// Post Form
+// app.post("/form", (req, res) => {
+//   const data = req.body.data;
+//   console.log(data);
+
+//   const transport = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//       user: "alhaseebonlinequraninstitute@gmail.com",
+//       pass: "",
+//     },
+//   });
+//   res.redirect("/freeTrial");
+// });
 
 app.use("/", (req, res) => {
   res.render("error.ejs");
