@@ -47,6 +47,11 @@
     opacity: 0.8;
   }
 
+  .mobile-nav .top a {
+    text-decoration: none;
+    color: #ffffffc9;
+  }
+
   .mobile-nav .bottom {
     height: 4rem;
     display: flex;
@@ -58,8 +63,7 @@
   .mobile-nav .bottom .logo {
     height: 85%;
     border-radius: 50%;
-    overflow: hidden;
-    margin: 0 4rem 0 7.5rem;
+    margin: 0 5rem 0 7rem;
   }
 
   .mobile-nav .bottom .logo a img {
