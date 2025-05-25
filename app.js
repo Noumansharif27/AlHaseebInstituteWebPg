@@ -118,19 +118,49 @@ app.get("/freeTrial", (req, res) => {
 });
 
 // Post Form
-// app.post("/form", (req, res) => {
-//   const data = req.body.data;
-//   console.log(data);
+app.post("/form", (req, res) => {
+  const data = req.body.data;
+  console.log(data);
 
-//   const transport = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: "alhaseebonlinequraninstitute@gmail.com",
-//       pass: "",
-//     },
-//   });
-//   res.redirect("/freeTrial");
-// });
+  const transportar = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "alhaseebonlinequraninstitute@gmail.com",
+      pass: "qfcz ubve gbci neqw",
+    },
+  });
+
+  const mailOptions = {
+    from: "alhaseebonlinequraninstitute@gmail.com",
+    to: data.email,
+    cc: "alhaseebonlinequraninstitute@gmail.com",
+    subject: `Thank you for submiting form for ${data.subject}`,
+    html: `<p>Thank you for your message you hae sent us</p>
+     <strong>${data.message}</strong>
+     <div style="text-align:center; margin-top: 2rem;">
+    <a href="https://alhaseebquraninstitute.com#courses"
+      style="display:inline-block;padding:1rem 1.5rem;background-color:#FFD700;color:#222;text-decoration:none;border-radius:6px;font-weight:bold;">
+      View Courses
+    </a>
+  </div>
+     `,
+  };
+  try {
+    transportar.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(`Error accured while sending mail ---- ${error}`);
+      } else {
+        console.log("Email has been sent.");
+        res.redirect("/freeTrial");
+      }
+    });
+  } catch (err) {
+    console.log(`error`);
+    res.redirect("/freeTrial");
+  }
+
+  res.redirect("/freeTrial");
+});
 
 app.use("/", (req, res) => {
   res.render("error.ejs");
