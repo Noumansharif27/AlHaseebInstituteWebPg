@@ -291,6 +291,10 @@ app.post("/form", (req, res) => {
   res.redirect("/#courses");
 });
 
+app.get("/contact", (req, res) => {
+  res.render("contact.ejs");
+});
+
 app.use("/", (req, res) => {
   res.render("error.ejs");
 });

@@ -1,0 +1,96 @@
+<%- layout("boilerplate") %>
+<body>
+  <section class="course-detail-pg">
+    <img src="\assets\alhaseeb-banner-1.webp" alt="section-hero-banner" />
+    <div class="course-detail-hero-section">
+      <div class="course-detail">
+        <h1 class="donation-headline">Contact</h1>
+        <p>
+          <strong>Al Haseeb Institute</strong> | Best Online Islamic Learning
+          Institute For Kids & Adults
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="course_form">
+    <div class="form">
+      <h2>Contact Us to Register!</h2>
+      <p>Fill in the form & we will contact you ass soon as possiable.</p>
+      <form action="/form" method="post">
+        <div>
+          <input
+            type="text"
+            name="data[subject]"
+            value="Free Trial"
+            style="display: none"
+          />
+        </div>
+        <div>
+          <label for="name">Your Full Name</label>
+          <input
+            type="text"
+            name="data[name]"
+            id="name"
+            placeholder="Enter Name"
+          />
+        </div>
+
+        <div>
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            name="data[email]"
+            id="email"
+            placeholder="Your Email (ex. Hamid@gmail.com)"
+          />
+        </div>
+
+        <div>
+          <label for="number">Your Number</label>
+          <input
+            type="number"
+            name="data[number]"
+            id="number"
+            placeholder="Enter Number"
+          />
+        </div>
+
+        <div>
+          <label for="country">Enter Your Country</label>
+          <input
+            type="text"
+            name="data[country]"
+            id="country"
+            placeholder="Enter Country"
+          />
+        </div>
+
+        <div>
+          <label for="dropdown">Choose Course:</label>
+          <select name="data[courses]" id="dropdown">
+            <option value="Noorani Qaida">Noorani Qaida</option>
+            <option value="Quran Recitation">Quran Recitation</option>
+            <option value="Quran Memorization">Quran Memorization</option>
+            <option value="Tajweed Course">Tajweed Course</option>
+            <option value="Quran with Tafseer">Quran with Tafseer</option>
+            <option value="Basic islamic course">Basic Islamic Course</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Enter Note(Optional)</label>
+          <textarea
+            name="data[message]"
+            id="message"
+            cols="35"
+            rows="8"
+            placeholder="Enter Note"
+          ></textarea>
+        </div>
+
+        <button class="primary-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>

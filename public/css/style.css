@@ -1106,7 +1106,7 @@ h3 {
 }
 
 .course_form .form div select {
-  color: #000;
+  color: #000 !important;
 }
 
 .course_form .form form,
@@ -1127,6 +1127,23 @@ h3 {
   color: var(--secondary-color);
   font-weight: bold;
   width: 10rem;
+}
+
+.course_form .form p {
+  opacity: 0.8;
+  position: relative;
+}
+
+.course_form .form p::before {
+  position: absolute;
+  content: "";
+  left: -1%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 100%;
+  background-color: #ffffff73;
+  border: 1rem;
 }
 
 .course_form .form button:hover {
