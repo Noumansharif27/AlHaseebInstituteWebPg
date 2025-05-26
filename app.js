@@ -198,8 +198,13 @@ app.post("/form", (req, res) => {
         <h2 style="color: #1a5d2b; text-align: center; margin-bottom: 18px;">New Form Submission Received</h2>
         <table style="width: 100%; margin: 20px 0 28px 0; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px #eee;">
           <tr style="background: #f3f6f9;">
-            <td style="padding: 10px 12px; font-weight: bold; width: 40%;">Name:</td>
+          ${
+            data.name
+              ? `<td style="padding: 10px 12px; font-weight: bold; width: 40%;">Name:</td>
             <td style="padding: 10px 12px;">${data.name || "N/A"}</td>
+            `
+              : ""
+          }
           </tr>
           <tr>
             <td style="padding: 10px 12px; font-weight: bold;">Email:</td>
@@ -240,8 +245,13 @@ app.post("/form", (req, res) => {
             <td style="padding: 10px 12px;">${data.subject}</td>
           </tr>
           <tr style="background: #f3f6f9;">
-            <td style="padding: 10px 12px; font-weight: bold;">Message:</td>
+           ${
+             data.name
+               ? `   <td style="padding: 10px 12px; font-weight: bold;">Message:</td>
             <td style="padding: 10px 12px;">${data.message}</td>
+            `
+               : ""
+           }
           </tr>
         </table>
         <p style="margin-top: 2rem; text-align: center; color: #888;">This is an automated notification from your website form.</p>
