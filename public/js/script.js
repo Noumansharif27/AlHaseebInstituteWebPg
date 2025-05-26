@@ -49,3 +49,15 @@ function preloader() {
     }
   });
 }
+
+const navAnchors = document.querySelectorAll(".nav-anchor");
+
+navAnchors.forEach((anchor, index) => {
+  anchor.addEventListener("click", () => {
+    setTimeout(() => {
+      anchor.style.color = "purple";
+    }, 1000);
+
+    console.dir(anchor);
+  });
+});
