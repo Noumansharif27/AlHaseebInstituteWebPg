@@ -141,29 +141,34 @@ app.post("/form", (req, res) => {
         <p style="font-size: 1.1rem;">We have received your message. Here are the details you provided:</p>
         <table style="width: 100%; margin: 20px 0; border-collapse: collapse;">
           <tr>
-            <td style="padding: 8px; font-weight: bold;">Name:</td>
-            <td style="padding: 8px;">${data.name || "N/A"}</td>
+          ${
+            data.name
+              ? `     <td style="padding: 8px; font-weight: bold;">Name:</td>
+            <td style="padding: 8px;">${data.name}</td>
+           `
+              : ""
+          }
           </tr>
           <tr>
             <td style="padding: 8px; font-weight: bold;">Email:</td>
             <td style="padding: 8px;">${data.email}</td>
           </tr>
           ${
-            data.phone
+            data.number
               ? `
           <tr>
             <td style="padding: 8px; font-weight: bold;">Phone:</td>
-            <td style="padding: 8px;">${data.phone}</td>
+            <td style="padding: 8px;">${data.number}</td>
           </tr>
           `
               : ""
           }
           ${
-            data.course
+            data.courses
               ? `
           <tr>
             <td style="padding: 8px; font-weight: bold;">Interested Course:</td>
-            <td style="padding: 8px;">${data.course}</td>
+            <td style="padding: 8px;">${data.courses}</td>
           </tr>
           `
               : ""
@@ -173,8 +178,15 @@ app.post("/form", (req, res) => {
             <td style="padding: 8px;">${data.subject}</td>
           </tr>
           <tr>
+          ${
+            data.message
+              ? `
             <td style="padding: 8px; font-weight: bold;">Message:</td>
             <td style="padding: 8px;">${data.message}</td>
+
+            `
+              : ""
+          }
           </tr>
         </table>
         <div style="text-align:center; margin-top: 2rem;">
@@ -263,7 +275,7 @@ app.post("/form", (req, res) => {
   transportar.sendMail(mailOptionsUser, (error, info) => {
     if (error) {
       console.log(`Error sending mail to user: ${error}`);
-      return res.redirect("/freeTrial");
+      return res.redirect("/#courses");
     } else {
       transportar.sendMail(mailOptionsAdmin, (adminError, adminInfo) => {
         if (adminError) {
@@ -271,12 +283,12 @@ app.post("/form", (req, res) => {
         } else {
           console.log("Admin notification sent.");
         }
-        return res.redirect("/freeTrial");
+        return res.redirect("/#courses");
       });
     }
   });
 
-  res.redirect("/freeTrial");
+  res.redirect("/#courses");
 });
 
 app.use("/", (req, res) => {
