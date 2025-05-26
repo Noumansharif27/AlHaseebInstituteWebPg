@@ -126,7 +126,15 @@
           </p>
         </div>
 
-        <form action="#" method="post">
+        <form action="/form" method="post">
+          <div>
+            <input
+              type="text"
+              name="data[subject]"
+              value="Consultant"
+              style="display: none"
+            />
+          </div>
           <input type="email" name="email" placeholder="Email" />
           <button>Get Consult</button>
         </form>
@@ -291,29 +299,56 @@
 
       <img src="/assets/alhaseeb-signup-poster.webp" alt="sign-up-model" />
 
-      <form action="#" method="post" class="sign-up-form">
+      <form action="/form" method="post" class="sign-up-form">
         <h3>Registration Form</h3>
+        <div>
+          <input
+            type="text"
+            name="data[subject]"
+            value="Sign Up"
+            style="display: none"
+          />
+        </div>
         <div class="name">
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" placeholder="name" />
+          <input
+            type="text"
+            name="data[name]"
+            id="name"
+            placeholder="name"
+            required
+          />
         </div>
 
         <div class="email">
           <label for="email">Email:</label>
-          <input type="email" name="email" id="email" placeholder="email" />
+          <input
+            type="email"
+            name="data[email]"
+            id="email"
+            placeholder="email"
+            required
+          />
         </div>
 
         <div class="phone">
           <label for="phone">Phone:</label>
-          <input type="text" name="phone" id="phone" placeholder="phone no" />
+          <input
+            type="number"
+            name="data[number]"
+            id="phone"
+            placeholder="phone no"
+            required
+          />
         </div>
 
         <div class="message">
           <label for="message">Message</label>
           <textarea
-            name="message"
+            name="data[message]"
             id="message"
             placeholder="message"
+            required
           ></textarea>
         </div>
 

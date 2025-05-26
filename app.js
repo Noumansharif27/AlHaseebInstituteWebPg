@@ -206,7 +206,7 @@ app.post("/form", (req, res) => {
             <td style="padding: 10px 12px;">${data.email}</td>
           </tr>
           ${
-            data.phone
+            data.number
               ? `
           <tr style="background: #f3f6f9;">
             <td style="padding: 10px 12px; font-weight: bold;">Phone:</td>
@@ -226,7 +226,7 @@ app.post("/form", (req, res) => {
               : ""
           }
           ${
-            data.course
+            data.courses
               ? `
           <tr style="background: #f3f6f9;">
             <td style="padding: 10px 12px; font-weight: bold;">Interested Course:</td>
