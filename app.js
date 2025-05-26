@@ -227,7 +227,7 @@ app.post("/form", (req, res) => {
               ? `
           <tr style="background: #f3f6f9;">
             <td style="padding: 10px 12px; font-weight: bold;">Phone:</td>
-            <td style="padding: 10px 12px;">${data.phone}</td>
+            <td style="padding: 10px 12px;">${data.number}</td>
           </tr>
           `
               : ""
@@ -247,7 +247,7 @@ app.post("/form", (req, res) => {
               ? `
           <tr style="background: #f3f6f9;">
             <td style="padding: 10px 12px; font-weight: bold;">Interested Course:</td>
-            <td style="padding: 10px 12px;">${data.course}</td>
+            <td style="padding: 10px 12px;">${data.courses}</td>
           </tr>
           `
               : ""
